@@ -1,0 +1,213 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f5f0eb;
+    font-family: 'Assistant', 'Segoe UI', Tahoma, sans-serif;
+    direction: rtl;
+}
+
+.container {
+    text-align: center;
+    padding: 2rem 1.5rem;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    width: 90%;
+    max-width: 400px;
+    margin: 10px;
+    border: 1px solid #e0d5c7;
+    position: relative;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+    border: 1px solid #c4a484;
+    border-radius: 15px;
+    pointer-events: none;
+}
+
+.header {
+    font-size: 1.5rem;
+    color: #4a4a4a;
+    margin: 0 0 1rem 0;
+    font-weight: 300;
+}
+
+.names {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 1rem 0;
+}
+
+.groom, .bride {
+    font-size: 1.6rem;
+    color: #8b6b4d;
+    font-weight: 600;
+}
+
+.event-details {
+    margin: 1rem 0;
+    line-height: 1.6;
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.schedule {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 1rem 0;
+    color: #4a4a4a;
+    font-size: 1.1rem;
+}
+
+.button {
+    background: #8b6b4d;
+    color: white;
+    padding: 0.6rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0.5rem;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: #735a40;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 1.5rem 1rem;
+    }
+    
+    .header {
+        font-size: 1.3rem;
+    }
+    
+    .names {
+        font-size: 1.4rem;
+    }
+    
+    .schedule {
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+}
+
+/* הוספה לקוד הקיים */
+
+.event-details i, .schedule i {
+    color: #8b6b4d;
+    margin-left: 8px;
+    font-size: 0.9em;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+    text-decoration: none;
+    margin: 0.5rem;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.calendar-btn {
+    background: #c4a484;  /* חום בהיר */
+    color: white;
+}
+
+.calendar-btn:hover {
+    background: #b39476;  /* חום בהיר יותר כהה */
+    transform: translateY(-2px);
+}
+
+.waze-btn {
+    background: #8b6b4d;  /* חום כהה */
+    color: white;
+}
+
+.waze-btn:hover {
+    background: #735a40;  /* חום כהה יותר */
+    transform: translateY(-2px);
+}
+
+.button i {
+    font-size: 1em;
+}
+
+/* עדכון למדיה קוורי */
+@media (max-width: 480px) {
+    .button {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+    
+    .event-details i, .schedule i {
+        font-size: 0.8em;
+    }
+}
+
+/* הוספת הסגנונות לספירה לאחור לקוד הקיים */
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0.8rem 0;
+    background: rgba(139, 107, 77, 0.1);
+    padding: 0.8rem;
+    border-radius: 12px;
+}
+
+.countdown-item {
+    text-align: center;
+}
+
+.countdown-item span:first-child {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #8b6b4d;
+    display: block;
+}
+
+.label {
+    color: #666;
+    font-size: 0.8rem;
+    margin-top: 0.2rem;
+}
+
+@media (max-width: 480px) {
+    .countdown {
+        gap: 0.5rem;
+        padding: 0.5rem;
+    }
+    
+    .countdown-item span:first-child {
+        font-size: 1.2rem;
+    }
+    
+    .label {
+        font-size: 0.7rem;
+    }
+}
